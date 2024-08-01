@@ -173,16 +173,16 @@ public:
     shape_msgs::msg::SolidPrimitive primitive;
     primitive.type = primitive.BOX;
     primitive.dimensions.resize(3);
-    primitive.dimensions[primitive.BOX_X] = 0.5;
-    primitive.dimensions[primitive.BOX_Y] = 0.5;
-    primitive.dimensions[primitive.BOX_Z] = 1.2;
+    primitive.dimensions[primitive.BOX_X] = 0.6;
+    primitive.dimensions[primitive.BOX_Y] = 0.6;
+    primitive.dimensions[primitive.BOX_Z] = 0.97;
 
     // Define a pose for the box (specified relative to frame_id).
     geometry_msgs::msg::Pose stand_pose1;
     stand_pose1.orientation.w = 1.0;
-    stand_pose1.position.x = 0.0;
-    stand_pose1.position.y = 0.0;
-    stand_pose1.position.z = -0.6;
+    stand_pose1.position.x = -0.2;
+    stand_pose1.position.y = -0.2;
+    stand_pose1.position.z = -0.97/2;
 
     collision_object.primitives.push_back(primitive);
     collision_object.primitive_poses.push_back(stand_pose1);

@@ -36,6 +36,12 @@ ament_target_dependencies(moveit_depalletizing_example
   moveit_visual_tools
 )
 
+add_executable(moveit_waybo_base_example src/moveit_waybo_base_example.cpp)
+ament_target_dependencies(moveit_waybo_base_example
+  moveit_ros_planning_interface
+  moveit_visual_tools
+)
+
 install(TARGETS
   moveit_basic_planners_example
   moveit_collision_avoidance_example
@@ -47,12 +53,13 @@ install(TARGETS
 install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}
 )
+
 install(DIRECTORY config
   DESTINATION share/${PROJECT_NAME}
 )
 
 if(BUILD_TESTING)
-
+  # Add testing related CMake commands here
 endif()
 
 ament_package()
